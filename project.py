@@ -18,7 +18,11 @@ def main():
     ax.fill_between(df.index, df["Troops"], color="#C5C5C5")
     ax.set_xlabel("Daily")
     ax.set_ylabel("Total Troops")
-    plt.show()
+
+    name = df.index[0].strftime("%Y-%m-%d").split("-")[1:]
+    name.reverse()
+    plt.savefig(f"images/{'-'.join(name)}.png")
+
 
 
 if __name__ == "__main__":

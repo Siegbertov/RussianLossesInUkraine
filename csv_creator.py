@@ -4,7 +4,7 @@ import csv
 import re
 
 
-def main():
+def create():
     url = "https://index.minfin.com.ua/ua/russian-invading/casualties/"
     extra_url = "http://index.minfin.com.ua/ua/{}"
 
@@ -58,7 +58,4 @@ def main():
             for k in day.keys():
                 current_row.append(day[k])
             writer.writerow(current_row)
-
-
-main()
 
